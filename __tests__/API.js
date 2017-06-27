@@ -1,7 +1,7 @@
 import * as API from "../src/API.js"
 require('dotenv').config();
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 20 * 1000; 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 30 * 1000; 
 
 
 describe("The API functions", () => {
