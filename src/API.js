@@ -11,7 +11,7 @@ import FormData from 'form-data';
 // import Headers from "headers";
 import Q from "q";
 
-
+import * as Normalize from './Normalize.js'
 
 // /** Define the URL  */
 const WEBSITE = "https://roosterteeth.com/"
@@ -75,7 +75,6 @@ export const login = async (user, password) => {
  * @param {*} token 
  */
 export async function getFeed(count, page, site, type, token) {
-
 	var result = await makeAPIRequest(`/api/v1/feed?count=${count}&page=${page}&site=${site}&type=${type}`
 		, generateOpts(token));
 

@@ -55,7 +55,7 @@ describe("The API functions", () => {
         it(" should fail ( no auth-token ) ", async () => {
             let result = await API.getSeasons(20, 20, 1, '');
             // The RT API is inconsistent as. Instead of erroring, it just returns nothing 
-            expect(result).toHaveLength(0);
+            expect(result).toHaveProperty("error");
         })
         let result;
         it("should work - should contain 20 entries", async () => {
